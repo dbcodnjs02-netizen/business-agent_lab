@@ -1,1 +1,1 @@
-# business-agent_lab
+# business-agent-lab
