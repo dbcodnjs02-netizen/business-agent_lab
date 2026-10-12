@@ -3,7 +3,7 @@ import numpy as np
 
 
 def run(eps=20, mu=0.3, beta=1.0, gamma=0.5, f_pess=0.0, f_fund=0.3,
-        n=300, T=600, k=0.01, pess_op=20.0, noise=1.0, lam=0.25, seed=0):
+        n=300, T=600, k=0.01, pess_op=20.0, noise=1.0, lam=0.25, seed=0, snaps=()):
     rng = np.random.default_rng(seed)
     op = rng.uniform(0, 100, n)
     npess = int(round(f_pess * n))
@@ -16,6 +16,7 @@ def run(eps=20, mu=0.3, beta=1.0, gamma=0.5, f_pess=0.0, f_fund=0.3,
     P = 100.0
     prices = [P]
     means = [op.mean()]
+    hist = {0: op.copy()} if 0 in snaps else {}
     for _ in range(T):
         # 1) pairwise bounded-confidence talks
         perm = rng.permutation(n)
@@ -38,6 +39,10 @@ def run(eps=20, mu=0.3, beta=1.0, gamma=0.5, f_pess=0.0, f_fund=0.3,
         op = np.clip(op, 0, 100)
         prices.append(P)
         means.append(op.mean())
+        if _ + 1 in snaps:
+            hist[_ + 1] = op.copy()
+    if snaps:
+        return np.array(prices), np.array(means), hist
     return np.array(prices), np.array(means), op
 
 
