@@ -215,3 +215,33 @@ def convert_currency(amount, from_currency, to_currency):
         "source": "frankfurter.dev",
         "converted": round(amount * data["rate"], 2),
     }
+
+
+# Days until a date (my own tool) ------------------------------------------
+
+DAYS_UNTIL = {
+    "type": "function",
+    "function": {
+        "name": "days_until",
+        "description": (
+            "Count the days from today to a date. "
+            "Returns a negative number if the date is in the past."
+        ),
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "date": {"type": "string", "description": "The date in YYYY-MM-DD format."},
+            },
+            "required": ["date"],
+        },
+    },
+}
+
+
+def days_until(date):
+    try:
+        target = Date.fromisoformat(date)
+    except ValueError:
+        raise ValueError("date must be YYYY-MM-DD")
+    today = Date.today()
+    return {"today": today.isoformat(), "date": date, "days": (target - today).days}

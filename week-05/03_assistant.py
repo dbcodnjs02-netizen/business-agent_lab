@@ -12,11 +12,13 @@ from model_api import ModelRequestError, request_model
 from tools import (
     CALCULATOR,
     CONVERT_CURRENCY,
+    DAYS_UNTIL,
     READ_SCHEDULE,
     SAVE_NOTE,
     SEARCH_WIKIPEDIA,
     calculator,
     convert_currency,
+    days_until,
     read_schedule,
     save_note,
     search_wikipedia,
@@ -27,7 +29,7 @@ MAX_ROUNDS = 5
 
 # The tool definitions sent to the model.
 # Exercise: add CONVERT_CURRENCY to this list.
-TOOLS = [CALCULATOR, READ_SCHEDULE, SEARCH_WIKIPEDIA, SAVE_NOTE, CONVERT_CURRENCY]
+TOOLS = [CALCULATOR, READ_SCHEDULE, SEARCH_WIKIPEDIA, SAVE_NOTE, CONVERT_CURRENCY, DAYS_UNTIL]
 
 # The functions this program allows the model to request.
 # Exercise: register convert_currency here.
@@ -37,6 +39,7 @@ FUNCTIONS = {
     "search_wikipedia": search_wikipedia,
     "save_note": save_note,
     "convert_currency": convert_currency,
+    "days_until": days_until,
 }
 
 SYSTEM_PROMPT = (
