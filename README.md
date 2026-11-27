@@ -2,6 +2,10 @@
 
 A basic Python agent built on the [Anthropic Python SDK](https://github.com/anthropics/anthropic-sdk-python) tool runner.
 
+## Projects
+
+- **[📚☕ 북카페 타이쿤 (Project 1)](bookcafe-tycoon/README.md)** — 브라우저에서 바로 실행되는 북카페 경영 시뮬레이션 웹 게임
+
 ## Layout
 
 ```
