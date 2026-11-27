@@ -1,0 +1,52 @@
+/* 북스테어 디자인 토큰 — 우드 · 베이지 · 파스텔 */
+:root {
+  /* Wood */
+  --wood-900: #4e3324;
+  --wood-700: #7a5136;
+  --wood-500: #a9774f;
+  --wood-300: #d4ab82;
+  --wood-100: #ecd5b8;
+
+  /* Beige / paper */
+  --cream: #fffaf1;
+  --beige-100: #fbf3e4;
+  --beige-200: #f3e5cd;
+  --beige-300: #e8d3b2;
+
+  /* Pastel accents */
+  --mint: #cfe7d3;
+  --mint-deep: #7fb08a;
+  --peach: #f8d5c2;
+  --peach-deep: #e3946f;
+  --butter: #f7e6a6;
+  --butter-deep: #d9b443;
+  --lavender: #dcd2ee;
+  --rose: #f3c6cf;
+  --rose-deep: #d97a8c;
+  --sky: #cfe2ee;
+
+  /* Text */
+  --ink: #4a3428;
+  --ink-soft: #7d6352;
+  --ink-faint: #a8917f;
+
+  /* Shape */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  /* Shadows — 그림자도 따뜻한 갈색 계열 */
+  --shadow-soft: 0 6px 18px rgba(78, 51, 36, 0.14);
+  --shadow-lift: 0 12px 32px rgba(78, 51, 36, 0.22);
+  --shadow-press: 0 4px 0 var(--wood-700);
+
+  /* Type */
+  --font-ui: 'Gowun Dodum', system-ui, sans-serif;
+  --font-book: 'Gowun Batang', serif;
+
+  /* Layout */
+  --hud-height: 64px;
+  --nav-height: 76px;
+  --app-max-width: 960px;
+}

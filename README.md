@@ -5,6 +5,7 @@ A basic Python agent built on the [Anthropic Python SDK](https://github.com/anth
 ## Projects
 
 - **[📚☕ 북카페 타이쿤 (Project 1)](bookcafe-tycoon/README.md)** — 브라우저에서 바로 실행되는 북카페 경영 시뮬레이션 웹 게임
+- **[📖 북스테어 (BookStair)](bookstair/README.md)** — React + TypeScript + Vite로 만든 북카페 타이쿤 버전
 
 ## Layout
 
